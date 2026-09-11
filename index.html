@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ratan Tata | A Life of Purpose</title>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: #f3f0e9;
+    color: #1c1c1c;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    min-height: 66px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+    border-bottom: 3px solid #1c3b3a;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    background: #1c3b3a;
+    color: #e3a857;
+
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Georgia, serif;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: #1c3b3a;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #b5622f;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 88vh;
+
+    padding: 90px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    background: #1c3b3a;
+    color: #f3f0e9;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: rgba(227, 168, 87, 0.1);
+}
+
+.hero-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 1s ease;
+}
+
+.small-title {
+    display: inline-block;
+
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #e3a857;
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6.5vw, 74px);
+    font-weight: 700;
+    line-height: 1.05;
+
+    margin-bottom: 22px;
+}
+
+.subtitle {
+    font-size: 22px;
+
+    color: #e3a857;
+
+    margin-bottom: 18px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+}
+
+.intro {
+    max-width: 560px;
+
+    font-size: 17px;
+    line-height: 1.85;
+
+    color: #d7ddd8;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1.2s ease;
+}
+
+.hero-image img {
+    width: 320px;
+    height: 380px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    border: none;
+
+    box-shadow: 18px 18px 0 rgba(227, 168, 87, 0.35);
+
+    transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+    transform: translate(-6px, -6px);
+}
+
+
+/* =========================================
+   COMMON SECTION
+========================================= */
+
+.section {
+    max-width: 1080px;
+
+    margin: auto;
+
+    padding: 95px 30px;
+}
+
+.section-label {
+    display: block;
+
+    color: #b5622f;
+
+    font-size: 12px;
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.section h2 {
+    font-size: 40px;
+
+    line-height: 1.2;
+
+    color: #1c3b3a;
+
+    margin-bottom: 28px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about {
+    background: #f3f0e9;
+}
+
+.about p:last-child {
+    max-width: 840px;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #4a4a44;
+}
+
+
+/* =========================================
+   JOURNEY / LIFE JOURNEY  (alternating timeline)
+========================================= */
+
+.timeline-section {
+    padding: 95px 8%;
+
+    background: #ffffff;
+
+    border-top: 3px solid #1c3b3a;
+    border-bottom: 3px solid #1c3b3a;
+}
+
+.timeline-section h2 {
+    max-width: 1080px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    color: #1c3b3a;
+}
+
+.timeline {
+    max-width: 950px;
+
+    margin: auto;
+
+    position: relative;
+
+    padding-left: 40px;
+
+    border-left: 3px solid #e3a857;
+}
+
+.timeline-item {
+    position: relative;
+
+    margin-bottom: 45px;
+
+    padding-left: 30px;
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: -50px;
+    top: 4px;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: #b5622f;
+
+    border: 3px solid #f3f0e9;
+
+    box-shadow: 0 0 0 2px #b5622f;
+}
+
+.timeline-item .year {
+    display: inline-block;
+
+    padding: 4px 14px;
+
+    background: #1c3b3a;
+
+    color: #e3a857;
+
+    border-radius: 3px;
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+
+    margin-bottom: 10px;
+}
+
+.timeline-item h3 {
+    margin: 0 0 8px;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    color: #1c3b3a;
+}
+
+.timeline-item p {
+    margin: 0;
+
+    max-width: 760px;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: #55584f;
+}
+
+
+/* =========================================
+   ACHIEVEMENTS
+========================================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+
+    margin: 40px 0;
+}
+
+.stat {
+    padding: 26px 14px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 2px solid #1c3b3a;
+
+    color: #1c3b3a;
+
+    border-radius: 4px;
+}
+
+.stat strong {
+    display: block;
+
+    font-size: 28px;
+    font-family: Georgia, serif;
+
+    color: #b5622f;
+
+    margin-bottom: 6px;
+}
+
+.stat span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    color: #1c3b3a;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-top: 40px;
+}
+
+.card {
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-left: 5px solid #b5622f;
+
+    box-shadow: 0 4px 14px rgba(28, 59, 58, 0.06);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+
+    font-size: 20px;
+
+    color: #1c3b3a;
+}
+
+.card p {
+    color: #5a5d54;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   BOOKS
+========================================= */
+
+.books-section {
+    background: #1c3b3a;
+    color: #f3f0e9;
+}
+
+.books-section .section-label {
+    color: #e3a857;
+}
+
+.books-section h2 {
+    color: #f3f0e9;
+}
+
+.books {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-top: 40px;
+}
+
+.book-card {
+    padding: 28px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(227, 168, 87, 0.3);
+
+    border-radius: 4px;
+}
+
+.book-number {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    color: #e3a857;
+
+    margin-bottom: 14px;
+}
+
+.book-card h3 {
+    font-size: 21px;
+
+    color: #f3f0e9;
+
+    margin-bottom: 10px;
+}
+
+.book-card p {
+    color: #cdd3cc;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   WHY HE INSPIRED US
+========================================= */
+
+.inspiration-cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-top: 40px;
+}
+
+.inspiration-card {
+    padding: 30px 24px;
+
+    background: #ffffff;
+
+    border-radius: 4px;
+
+    text-align: left;
+
+    border-top: 4px solid #e3a857;
+
+    box-shadow: 0 4px 14px rgba(28, 59, 58, 0.06);
+}
+
+.icon {
+    font-size: 38px;
+
+    margin-bottom: 14px;
+}
+
+.inspiration-card h3 {
+    color: #1c3b3a;
+
+    margin-bottom: 10px;
+
+    font-size: 19px;
+}
+
+.inspiration-card p {
+    color: #55584f;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   VISION
+========================================= */
+
+.vision {
+    padding: 95px 25px;
+
+    background: #eae4d3;
+
+    color: #1c3b3a;
+}
+
+.vision-content {
+    max-width: 940px;
+
+    margin: auto;
+}
+
+.vision .section-label {
+    color: #b5622f;
+}
+
+.vision h2 {
+    font-family: Georgia, serif;
+
+    font-size: 44px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin-bottom: 22px;
+}
+
+.vision-content > p:not(.section-label) {
+    max-width: 740px;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #3a3d36;
+}
+
+.vision-points {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-top: 44px;
+}
+
+.vision-points div {
+    padding: 24px;
+
+    background: #ffffff;
+
+    border-radius: 4px;
+
+    border-bottom: 3px solid #b5622f;
+}
+
+.vision-points strong {
+    display: block;
+
+    font-size: 24px;
+    font-family: Georgia, serif;
+
+    margin-bottom: 6px;
+
+    color: #b5622f;
+}
+
+.vision-points span {
+    font-size: 14px;
+
+    color: #4d504a;
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.quote-section {
+    padding: 95px 25px;
+
+    text-align: center;
+
+    background: #b5622f;
+
+    color: white;
+}
+
+.quote {
+    max-width: 830px;
+
+    margin: auto;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+
+    line-height: 1.5;
+
+    color: #ffffff;
+}
+
+.quote-text {
+    max-width: 700px;
+    margin: 25px auto 0;
+    font-size: 15px;
+    color: rgba(255,255,255,0.85);
+}
+
+.quote-author {
+    margin-top: 25px;
+
+    font-family: 'Segoe UI', sans-serif;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    color: #1c3b3a;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 26px 20px;
+
+    text-align: center;
+
+    background: #14201f;
+
+    color: #9ea89f;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 70px 6%;
+        gap: 40px;
+    }
+
+    .hero-image img {
+        width: 280px;
+        height: 340px;
+    }
+
+    .cards { grid-template-columns: repeat(2, 1fr); }
+    .books { grid-template-columns: repeat(2, 1fr); }
+    .inspiration-cards { grid-template-columns: repeat(2, 1fr); }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .vision-points { grid-template-columns: repeat(2, 1fr); }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .navbar { min-height: 60px; padding: 0 18px; }
+    .nav-links { gap: 12px; }
+    .nav-links a { font-size: 10px; }
+    .logo { width: 36px; height: 36px; font-size: 11px; }
+
+    .hero {
+        min-height: auto;
+        padding: 65px 22px;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-content { max-width: 100%; }
+    .small-title { font-size: 11px; letter-spacing: 3px; }
+    .hero h1 { font-size: 44px; }
+    .subtitle { font-size: 19px; }
+    .intro { font-size: 15px; }
+    .hero-image img { width: 240px; height: 290px; }
+
+    .section { padding: 65px 20px; }
+    .section h2 { font-size: 30px; }
+
+    .timeline-section { padding: 65px 20px; }
+    .timeline-section h2 { font-size: 30px; margin-bottom: 40px; }
+    .timeline { padding-left: 26px; }
+    .timeline-item { padding-left: 16px; margin-bottom: 34px; }
+    .timeline-item::before { left: -34px; }
+
+    .cards { grid-template-columns: 1fr; }
+    .books { grid-template-columns: 1fr; }
+    .inspiration-cards { grid-template-columns: 1fr; }
+
+    .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .stat { padding: 20px 8px; }
+    .stat strong { font-size: 23px; }
+
+    .vision { padding: 65px 20px; }
+    .vision h2 { font-size: 32px; }
+    .vision-content > p:not(.section-label) { font-size: 16px; }
+    .vision-points { grid-template-columns: 1fr; }
+
+    .quote-section { padding: 70px 20px; }
+    .quote { font-size: 22px; }
+    .quote-author { font-size: 13px; }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+    .nav-links { gap: 8px; }
+    .nav-links a { font-size: 9px; }
+    .hero h1 { font-size: 38px; }
+    .subtitle { font-size: 18px; }
+    .hero-image img { width: 210px; height: 260px; }
+    .stats { grid-template-columns: 1fr; }
+    .quote { font-size: 20px; }
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">RT</div>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#timeline">Journey</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#inspiration">Inspiration</a>
+            <a href="#books">Reflections</a>
+            <a href="#quote">Message</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">Remembering a Titan of Industry</p>
+
+            <h1>Ratan Tata</h1>
+
+            <p class="subtitle">
+                Industrialist | Philanthropist | Chairman, Tata Group
+            </p>
+
+            <p class="intro">
+                An Indian industrialist and philanthropist whose quiet
+                leadership transformed the Tata Group into a global
+                conglomerate while never losing sight of the people
+                his decisions were meant to serve.
+            </p>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img
+                src="/ratan_tat_2.jpeg"
+                alt="Ratan Tata"
+            >
+
+        </div>
+
+    </header>
+
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+
+        <p class="section-label">About</p>
+
+        <h2>A Builder Who Believed in People</h2>
+
+        <p>
+            Ratan Naval Tata was born on 28 December 1937 in Bombay to
+            Naval Tata, who had been adopted into the Tata family. He
+            studied architecture and structural engineering at Cornell
+            University before returning to India to work his way up
+            through the Tata Group from the shop floor.
+        </p>
+
+        <p>
+            As chairman of Tata Sons from 1991 to 2012, he turned a
+            largely domestic conglomerate into an international
+            business spanning steel, automobiles, technology and
+            hospitality, while remaining known throughout for his
+            humility, restraint and deep sense of responsibility
+            toward the country he served.
+        </p>
+
+    </section>
+
+
+    <!-- Life Journey -->
+    <section class="section timeline-section" id="timeline">
+
+        <p class="section-label">Life Journey</p>
+
+        <h2>From Cornell to the Chairman's Office</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <span class="year">1937</span>
+
+                <div>
+                    <h3>Born in Bombay</h3>
+
+                    <p>
+                        Ratan Naval Tata was born on 28 December 1937
+                        to Naval Tata and Sooni Tata, into a family
+                        already central to Indian industry.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="timeline-item">
+                <span class="year">1962</span>
+
+                <div>
+                    <h3>Joining the Tata Group</h3>
+
+                    <p>
+                        After completing his studies at Cornell
+                        University, he joined Tata Industries and
+                        later worked on the shop floor of Tata Steel,
+                        learning the business from the ground up.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="timeline-item">
+                <span class="year">1991</span>
+
+                <div>
+                    <h3>Becoming Chairman</h3>
+
+                    <p>
+                        He succeeded J.R.D. Tata as chairman of Tata
+                        Sons, taking charge at a moment when India's
+                        economy was opening up to the world.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="timeline-item">
+                <span class="year">2000s</span>
+
+                <div>
+                    <h3>Building a Global Group</h3>
+
+                    <p>
+                        Under his leadership the Tata Group acquired
+                        Tetley, Corus and Jaguar Land Rover, and in
+                        2009 launched the Tata Nano, envisioned as an
+                        affordable car for Indian families.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="timeline-item">
+                <span class="year">2012</span>
+
+                <div>
+                    <h3>Stepping Down as Chairman</h3>
+
+                    <p>
+                        After more than two decades at the helm, he
+                        retired as chairman in December 2012 and was
+                        named Chairman Emeritus of Tata Sons.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="timeline-item">
+                <span class="year">2024</span>
+
+                <div>
+                    <h3>A Life Remembered</h3>
+
+                    <p>
+                        Ratan Tata passed away on 9 October 2024 in
+                        Mumbai, leaving behind a legacy of principled
+                        leadership and generous philanthropy.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Achievements -->
+    <section class="section" id="achievements">
+
+        <p class="section-label">Achievements</p>
+
+        <h2>A Career Measured in Impact</h2>
+
+
+        <!-- Achievement Stats -->
+        <div class="stats">
+
+            <div class="stat">
+                <strong>1991–2012</strong>
+                <span>Chairman, Tata Sons</span>
+            </div>
+
+            <div class="stat">
+                <strong>2008</strong>
+                <span>Padma Vibhushan</span>
+            </div>
+
+            <div class="stat">
+                <strong>2000</strong>
+                <span>Padma Bhushan</span>
+            </div>
+
+            <div class="stat">
+                <strong>30+</strong>
+                <span>Startups Personally Backed</span>
+            </div>
+
+        </div>
+
+
+        <!-- Achievement Cards -->
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Global Expansion</h3>
+
+                <p>
+                    Guided landmark acquisitions including Tetley,
+                    Corus and Jaguar Land Rover, turning Tata into
+                    a genuinely international group.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Civilian Honours</h3>
+
+                <p>
+                    Recognised with the Padma Bhushan in 2000 and
+                    the Padma Vibhushan in 2008, among India's
+                    highest civilian awards.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Quiet Philanthropy</h3>
+
+                <p>
+                    Directed the majority of Tata Group profits
+                    toward charitable trusts supporting education,
+                    healthcare and rural development.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Why He Inspired Us -->
+    <section class="section" id="inspiration">
+
+        <p class="section-label">Why He Inspired Us</p>
+
+        <h2>Leadership Without Noise</h2>
+
+        <div class="inspiration-cards">
+
+            <div class="inspiration-card">
+
+                <div class="icon">🤝</div>
+
+                <h3>Trust Over Ego</h3>
+
+                <p>
+                    He led with restraint and integrity, choosing
+                    long-term trust and reputation over short-term
+                    gain, even under pressure.
+                </p>
+
+            </div>
+
+
+            <div class="inspiration-card">
+
+                <div class="icon">🏭</div>
+
+                <h3>Industry With Intent</h3>
+
+                <p>
+                    From the Tata Nano to Jaguar Land Rover, his
+                    ventures reflected a belief that business should
+                    solve real problems for real people.
+                </p>
+
+            </div>
+
+
+            <div class="inspiration-card">
+
+                <div class="icon">💚</div>
+
+                <h3>Giving Back Quietly</h3>
+
+                <p>
+                    Much of his philanthropy was carried out without
+                    fanfare, guided by a conviction that wealth
+                    carries responsibility.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Reflections -->
+    <section class="section books-section" id="books">
+
+        <p class="section-label">His Words &amp; Reflections</p>
+
+        <h2>Ideas He Left Behind</h2>
+
+        <div class="books">
+
+            <div class="book-card">
+
+                <div class="book-number">01</div>
+
+                <h3>On Taking Risks</h3>
+
+                <p>
+                    He often spoke of the importance of taking
+                    calculated risks, treating setbacks such as the
+                    Nano's early struggles as lessons rather than
+                    failures.
+                </p>
+
+            </div>
+
+
+            <div class="book-card">
+
+                <div class="book-number">02</div>
+
+                <h3>On Ethical Business</h3>
+
+                <p>
+                    He believed a company's conduct mattered as much
+                    as its profits, and worked to keep the Tata name
+                    synonymous with trust.
+                </p>
+
+            </div>
+
+
+            <div class="book-card">
+
+                <div class="book-number">03</div>
+
+                <h3>On Giving</h3>
+
+                <p>
+                    He viewed philanthropy not as an afterthought but
+                    as core to the purpose of building an enterprise
+                    in the first place.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Vision Section -->
+    <section class="vision">
+
+        <div class="vision-content">
+
+            <p class="section-label">His Vision</p>
+
+            <h2>An India Built on Trust and Enterprise</h2>
+
+            <p>
+                Ratan Tata envisioned an India where business,
+                innovation and social responsibility moved forward
+                together, and where ambition never came at the cost
+                of integrity.
+            </p>
+
+
+            <div class="vision-points">
+
+                <div>
+                    <strong>01</strong>
+                    <span>Lead with integrity, always</span>
+                </div>
+
+                <div>
+                    <strong>02</strong>
+                    <span>Build for the many, not the few</span>
+                </div>
+
+                <div>
+                    <strong>03</strong>
+                    <span>Give back without seeking credit</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Final Message -->
+    <section class="quote-section" id="quote">
+
+        <p class="section-label" style="color:#1c3b3a;">A Lasting Message</p>
+
+        <h2 style="color:#ffffff;">His Words, Our Inspiration</h2>
+
+        <p class="quote">
+            "I don't believe in taking right decisions. I take decisions and then make them right."
+        </p>
+
+        <p class="quote-text">
+            His life reminds us that true leadership is measured not
+            by the noise it makes, but by the trust it earns and the
+            people it quietly uplifts along the way.
+        </p>
+
+        <p class="quote-author">
+            — Remembering Ratan Tata
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            A Tribute to Ratan Tata
+        </p>
+
+        <p>
+            Created as a Web Development Internship Project
+            for SARV Infotech.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
